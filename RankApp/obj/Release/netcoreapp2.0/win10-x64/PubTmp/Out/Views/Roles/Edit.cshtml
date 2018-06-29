@@ -1,0 +1,21 @@
+﻿@using Microsoft.AspNetCore.Identity
+
+<h2>Встановлення прав доступу для користувача @Model.UserEmail</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" name="userId" value="@Model.UserId" />
+    <div class="form-group">
+        @foreach (IdentityRole role in Model.AllRoles)
+        {
+            <div class="row">
+
+                <label class="col-sm-3">@role.Name</label>
+                <div class="col-sm-1">
+                    <input type="checkbox" class="form-control" name="roles" value="@role.Name"
+                           @(Model.UserRoles.Contains(role.Name) ? "checked=\"checked\"" : "") />
+                </div>
+            </div>
+        }
+    </div>
+    <button type="submit" class="btn btn-primary">Зберегти</button>
+</form>

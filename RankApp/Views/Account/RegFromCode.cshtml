@@ -1,0 +1,16 @@
+﻿@model RankApp.Models.AccountViewModels.RegFromCodeViewModel;
+@{
+    ViewData["Title"] = "RegFromCode";
+}
+
+<h2>Введіть код реєстрації</h2>
+<p>@ViewData["Error"]</p>
+
+<form asp-controller="Account" asp-action="RegFromCode" method="post">
+    <div class="form-group">
+        <label asp-for="RegCode"></label>
+        <input asp-for="RegCode" class="form-control" />
+        <span asp-validation-for="RegCode" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-default">Register</button>
+</form>

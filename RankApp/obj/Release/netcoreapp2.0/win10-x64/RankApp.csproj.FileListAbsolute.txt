@@ -1,0 +1,13 @@
+C:\Users\ostap\source\repos\RankApp\RankApp\bin\Release\netcoreapp2.0\win10-x64\RankApp.deps.json
+C:\Users\ostap\source\repos\RankApp\RankApp\bin\Release\netcoreapp2.0\win10-x64\RankApp.runtimeconfig.json
+C:\Users\ostap\source\repos\RankApp\RankApp\bin\Release\netcoreapp2.0\win10-x64\RankApp.runtimeconfig.dev.json
+C:\Users\ostap\source\repos\RankApp\RankApp\bin\Release\netcoreapp2.0\win10-x64\RankApp.dll
+C:\Users\ostap\source\repos\RankApp\RankApp\bin\Release\netcoreapp2.0\win10-x64\RankApp.pdb
+C:\Users\ostap\source\repos\RankApp\RankApp\obj\Release\netcoreapp2.0\win10-x64\RankApp.csprojAssemblyReference.cache
+C:\Users\ostap\source\repos\RankApp\RankApp\obj\Release\netcoreapp2.0\win10-x64\RankApp.csproj.CoreCompileInputs.cache
+C:\Users\ostap\source\repos\RankApp\RankApp\obj\Release\netcoreapp2.0\win10-x64\UserSecretsAssemblyInfo.cs
+C:\Users\ostap\source\repos\RankApp\RankApp\obj\Release\netcoreapp2.0\win10-x64\RankApp.AssemblyInfoInputs.cache
+C:\Users\ostap\source\repos\RankApp\RankApp\obj\Release\netcoreapp2.0\win10-x64\RankApp.AssemblyInfo.cs
+C:\Users\ostap\source\repos\RankApp\RankApp\obj\Release\netcoreapp2.0\win10-x64\RankApp.dll
+C:\Users\ostap\source\repos\RankApp\RankApp\obj\Release\netcoreapp2.0\win10-x64\RankApp.pdb
+C:\Users\ostap\source\repos\RankApp\RankApp\bin\Release\netcoreapp2.0\win10-x64\wwwroot\js\site.js

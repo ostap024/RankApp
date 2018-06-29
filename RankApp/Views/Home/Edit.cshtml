@@ -1,0 +1,109 @@
+﻿@model RankApp.Data.Navantagennya
+@{
+    ViewBag.Title = "Редагування навантаження";
+}
+<form asp-action="edit" asp-controller="home" asp-route-id="@Model.Id">
+    <div class="form-group">
+        <label asp-for="NumberPP" class="control-label">Номер ПП</label>
+        <input type="number" asp-for="NumberPP" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="NumberDisc" class="control-label">Номер дисципліни</label>
+        <input type="number" asp-for="NumberDisc" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Nazva" class="control-label">Назва дисципліни</label>
+        <input type="text" asp-for="Nazva" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Grupa" class="control-label">Група</label>
+        <input type="text" asp-for="Grupa" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Kurs" class="control-label">Курс</label>
+        <input type="number" asp-for="Kurs" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Studentiv" class="control-label">Студентів</label>
+        <input type="number" asp-for="Studentiv" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Grup" class="control-label">Груп</label>
+        <input type="number" asp-for="Grup" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Pidgrup" class="control-label">Підгруп</label>
+        <input type="number" asp-for="Pidgrup" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Semestr" class="control-label">Семестр</label>
+        <input type="text" asp-for="Semestr" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Lekcii" class="control-label">Лекції</label>
+        <input type="number" asp-for="Lekcii" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Consultant" class="control-label">Консультант</label>
+        <input type="number" asp-for="Consultant" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Laborant" class="control-label">Лабораторні</label>
+        <input type="number" asp-for="Laborant" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Praktuchni" class="control-label">Практичні</label>
+        <input type="number" asp-for="Praktuchni" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Modul" class="control-label">Модуль</label>
+        <input type="number" asp-for="Modul" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Kursovi" class="control-label">Курсові</label>
+        <input type="number" asp-for="Kursovi" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Zalik" class="control-label">Залік</label>
+        <input type="number" asp-for="Zalik" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Isput" class="control-label">Іспит</label>
+        <input type="number" asp-for="Isput" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Dyplom" class="control-label">Диплом</label>
+        <input type="number" asp-for="Dyplom" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="DEK" class="control-label">ДЕК</label>
+        <input type="number" asp-for="DEK" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Aspiranty" class="control-label">Аспіранти</label>
+        <input type="number" asp-for="Aspiranty" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Praktyka" class="control-label">Практика</label>
+        <input type="number" asp-for="Praktyka" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Kontrolny" class="control-label">Контрольні</label>
+        <input type="number" asp-for="Kontrolny" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Vsyogo" class="control-label">Всього</label>
+        <input type="number" asp-for="Vsyogo" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Primitka" class="control-label">Примітка</label>
+        <input type="text" asp-for="Primitka" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Vikladach" class="control-label">Викладач</label>
+        <input type="text" asp-for="Vikladach" class="form-control" />
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Send" class="btn btn-default" />
+    </div>
+</form>

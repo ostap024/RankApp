@@ -1,0 +1,49 @@
+﻿@model RankApp.Data.MasterNavant
+
+<div id="MyRating" class="tab-pane fade">
+    <h3>Мій рейтинг</h3>
+    <table class="table">
+
+        @if (ViewBag.userName != null)
+        {
+            double? rating = 0;
+            var item = Model.NavchRob.SingleOrDefault(x => x.PIB.Contains(ViewBag.userName));
+            if (item != null)
+            {
+
+
+                rating = item.Sum.GetValueOrDefault() + rating.GetValueOrDefault();
+                var bufMetod = Model.MetodRob.SingleOrDefault(x => x.User == item.User);
+                rating = bufMetod.Sum.GetValueOrDefault() + rating.GetValueOrDefault();
+                var bufNauk = Model.NaukRob.SingleOrDefault(x => x.User == item.User);
+                rating = bufNauk.Sum.GetValueOrDefault() + rating.GetValueOrDefault();
+                var bufOrg = Model.OrgRob.SingleOrDefault(x => x.User == item.User);
+                rating = bufOrg.Sum.GetValueOrDefault() + rating.GetValueOrDefault();
+                var bufNormGod = Model.NormatKilkist.SingleOrDefault(x => x.User == item.User);
+                rating = bufNormGod.Sum.GetValueOrDefault() + rating.GetValueOrDefault();
+                <tr>
+                    <td> Навчальна робота: @item.Sum </td>
+                </tr>
+                <tr>
+                    <td> Методична робота: @bufMetod.Sum </td>
+                </tr>
+                <tr>
+                    <td> Наукова робота: @bufNauk.Sum </td>
+                </tr>
+                <tr>
+                    <td> Організаційна робота: @bufOrg.Sum </td>
+                </tr>
+                <tr>
+                    <td> Бали на організаційну роботу: @bufNormGod.Sum </td>
+                </tr>
+                <tr>
+                    <td>Рейтинг: @rating </td>
+                </tr>
+            }
+
+        }
+
+
+    </table>
+
+</div>

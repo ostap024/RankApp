@@ -1,0 +1,34 @@
+﻿@model RankApp.Data.Navantagennya
+@{
+    ViewBag.Title = "Видалення навантаження";
+}
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>Номер дисципліни</dt>
+        <dd>@Model.NumberDisc</dd>
+
+        <dt>Назва дисципліни</dt>
+        <dd>@Model.Nazva</dd>
+
+        <dt>Група</dt>
+        <dd>@Model.Grupa</dd>
+
+        <dt>Курс</dt>
+        <dd>@Model.Kurs</dd>
+
+        <dt>Кількість студентів</dt>
+        <dd>@Model.Studentiv</dd>
+
+        <dt>Кількість груп</dt>
+        <dd>@Model.Grup</dd>
+    </dl>
+
+    <div>
+        <form asp-controller="Home" asp-action="Delete" method="post">
+            <div class="form-group">
+                <input type="submit" class="btn btn-default" value="Удалить" />
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,105 @@
+﻿@using System;
+@model RankApp.Data.MasterNavant
+@inject UserManager<ApplicationUser> UserManager
+@{
+    ViewBag.Title = "Головна";
+}
+@{
+    if (User.Identity.IsAuthenticated)
+    {
+        <div class="row">
+            <div class="col-12 col-md-3">
+                <ul class="nav nav-pills nav-stacked">
+                    @{ RankApp.Data.Navantagennya navant = Model.Navantagennya.FirstOrDefault(p => p.Vikladach == ViewBag.userName);
+                        if (navant != null)
+                        {
+                            <li class="active"><a data-toggle="tab" href="#MyNavant">Мої навантаження</a></li>
+                        }
+                    }
+                    @{
+                        string userId = ViewBag.user;
+                    }
+                    @{ RankApp.Data.NavchRob navchRob = Model.NavchRob.FirstOrDefault(p => p.User == userId);
+                        if (navchRob != null)
+                        {
+                            <li><a data-toggle="tab" href="#AddNavch">Навчальна робота</a></li>
+                        }
+                    }
+                    @{ RankApp.Data.MetodRob metodRob = Model.MetodRob.FirstOrDefault(z => z.User == userId);
+                        if (metodRob != null)
+                        {
+                            <li><a data-toggle="tab" href="#AddMetod">Методична робота</a></li>
+                        }
+                    }
+                    @{ RankApp.Data.NaukRob naukRob = Model.NaukRob.FirstOrDefault(p => p.User == userId);
+                        if (naukRob != null)
+                        {
+                            <li><a data-toggle="tab" href="#AddNauk">Наукова робота</a></li>
+                        }
+                    }
+                    @{ RankApp.Data.OrgRob orgRob = Model.OrgRob.FirstOrDefault(p => p.User == userId);
+                        if (orgRob != null)
+                        {
+                            <li><a data-toggle="tab" href="#AddOrg">Організаційно-виховна робота</a></li>
+                        }
+                    }
+                    @if (User.IsInRole("Admin"))
+                    {
+                        @if (navant != null)
+                        {
+                            <li><a data-toggle="tab" href="#AllNavant">Всі навантаження</a></li>
+                        }
+                        else
+                        {
+                            <li class="active"><a data-toggle="tab" href="#AllNavant">Всі навантаження</a></li>
+                        }
+                        <li><a data-toggle="tab" href="#AllRating">Рейтинг всіх викладачів</a></li>
+                    }
+                    <li><a data-toggle="tab" href="#MyRating">Мій рейтинг</a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-9">
+                <div class="tab-content">
+                    @{if (navant != null)
+                        {
+                            Html.RenderPartial("Navantagennya", Model.Navantagennya);
+                        }
+                    }
+                    @{if (navchRob != null)
+                        {
+                            Html.RenderPartial("NavchRob", navchRob);
+                        }
+                    }
+                    @{if (metodRob != null)
+                        {
+                            Html.RenderPartial("MetodRob", metodRob);
+                        }
+                    }
+                    @{if (naukRob != null)
+                        {
+                            Html.RenderPartial("NaukRob", naukRob);
+                        }
+                    }
+                    @{if (orgRob != null)
+                        {
+                            Html.RenderPartial("OrgRob", orgRob);
+                        }
+                    }
+                    @if (User.IsInRole("Admin"))
+                    {
+                        Html.RenderPartial("AllNavantagennya", Model.Navantagennya);
+                    }
+                    @if (User.IsInRole("Admin"))
+                    {
+                        Html.RenderPartial("AllRating", Model);
+                    }
+                    @{
+                        Html.RenderPartial("Rating", Model);
+                    }
+                </div>
+            </div>
+        </div>
+    }
+}
+
+

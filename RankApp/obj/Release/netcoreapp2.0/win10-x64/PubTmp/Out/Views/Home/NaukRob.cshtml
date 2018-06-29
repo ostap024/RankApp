@@ -1,0 +1,504 @@
+﻿@model RankApp.Data.NaukRob
+
+<div id="AddNauk" class="tab-pane fade">
+    <h3>Методична робота</h3>
+    <form asp-controller="Home" asp-action="UpdateNaukRob" asp-route-id="@Model.Id">
+        <div>
+            <div class="form-group" id="content-box">
+                <label data-toggle="tooltip" data-placement="top" title="" class="control-label">Підготовка проектних заявок</label>
+                <div class="row">
+
+                    <label asp-for="PidgotovkaMijnarodGrant" class="col-sm-9">на отримання міжнародних наукових та освітніх грантів:</label>
+                    <div class="col-sm-3">
+                        <input type="number" asp-for="PidgotovkaMijnarodGrant" class="form-control" min="0" />
+                    </div>
+
+                    <label asp-for="PidgotovkaMONGrant" class="col-sm-9">науково-дослідних робіт, що фінансуються з держбюджету МОН України:</label>
+                    <div class="col-sm-3">
+                        <input type="number" asp-for="PidgotovkaMONGrant" class="form-control" min="0" />
+                    </div>
+
+                    <label asp-for="PidgotovkaSpilnProekt" class="col-sm-9">спільних науково-дослідних проектів (під егідою МОН України):</label>
+                    <div class="col-sm-3">
+                        <input type="number" asp-for="PidgotovkaSpilnProekt" class="form-control" min="0" />
+                    </div>
+
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <div class="row">
+                    <label asp-for="PidgotovkaNDR" class="control-label col-sm-6">Підготовка та укладання угоди на виконання госпдоговірної НДР:</label>
+                    <div class="col-sm-6">
+                        <input type="number" asp-for="PidgotovkaNDR" class="form-control" min="0" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="StajZakordonVNZ" class="control-label">Стажування у закордонних ВНЗ або наукових установах в межах індивідуального гранту</label>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="StajZakordonVNZNDniv" class="col-sm-4">Вступників:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="StajZakordonVNZNDniv" class="form-control" min="0" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label asp-for="StajZakordonVNZ" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.StajZakordonVNZ
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="ZahistDoktor" data-toggle="tooltip" data-placement="top" title="" class="control-label">Захист докторської дисертації</label>
+                <div class="row">
+
+                    <div class="col-sm-6">
+                        <label asp-for="ZahistDoktorBool" class="col-sm-4">Захист докторської дисертації:</label>
+                        <div class="col-sm-8">
+                            <input type="checkbox" asp-for="ZahistDoktorBool" class="form-control" min="0" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label asp-for="ZahistDoktor" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.ZahistDoktor
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="ZahistKandidat" data-toggle="tooltip" data-placement="top" title="" class="control-label">Захист кандидатської дисертації</label>
+                <div class="row">
+
+                    <div class="col-sm-6">
+                        <label asp-for="ZahistKandidatBool" class="col-sm-4">Захист кандидатської дисертації:</label>
+                        <div class="col-sm-8">
+                            <input type="checkbox" asp-for="ZahistKandidatBool" class="form-control" min="0" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label asp-for="ZahistKandidat" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.ZahistKandidat
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <div class="row">
+                    <label asp-for="VidannyaMonografy" class="control-label col-sm-6">Видання монографії:</label>
+                    <div class="col-sm-6">
+                        <input type="number" asp-for="VidannyaMonografy" class="form-control" min="0" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="RecenzMonografy" class="control-label">Рецензування монографії</label>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="RecenzMonografyNStor" class="col-sm-4">Сторінок:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="RecenzMonografyNStor" class="form-control" min="0" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label asp-for="RecenzMonografy" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.RecenzMonografy
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label data-toggle="tooltip" data-placement="top" title="" class="control-label">Підготовка та видання наукової статті у наукових виданнях, що входять до наукометричних баз даних Scopus або Web of Science</label>
+                <div class="row">
+
+                    <label asp-for="StattyaScopusAngl" class="col-sm-9">видані англійською мовою:</label>
+                    <div class="col-sm-3">
+                        <input type="number" asp-for="StattyaScopusAngl" class="form-control" min="0" />
+                    </div>
+
+                    <label asp-for="StattyaScopusUkr" class="col-sm-9">видані українською мовою:</label>
+                    <div class="col-sm-3">
+                        <input type="number" asp-for="StattyaScopusUkr" class="form-control" min="0" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group" id="content-box">
+                <label data-toggle="tooltip" data-placement="top" title="" class="control-label">Підготовка та видання наукової статті у наукових виданнях, які входять до інших міжнародних наукометричних баз даних</label>
+                <div class="row">
+                    <label asp-for="StattyaMijnarodZakordon" class="col-sm-9">закордонних наукових виданнях:</label>
+                    <div class="col-sm-3">
+                        <input type="number" asp-for="StattyaMijnarodZakordon" class="form-control" min="0" />
+                    </div>
+
+                    <label asp-for="StattyaMijnarodVitch" class="col-sm-9">вітчизняних наукових виданнях:</label>
+                    <div class="col-sm-3">
+                        <input type="number" asp-for="StattyaMijnarodVitch" class="form-control" min="0" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label data-toggle="tooltip" data-placement="top" title="" class="control-label">Підготовка та видання наукової статті у </label>
+                <div class="row">
+                    <label asp-for="StattyaNeMignarod" class="col-sm-9">закордонних виданнях, які не входять до міжнародних наукометричних баз:</label>
+                    <div class="col-sm-3">
+                        <input type="number" asp-for="StattyaNeMignarod" class="form-control" min="0" />
+                    </div>
+                    <label asp-for="VidannyaFahUkr" class="col-sm-9">фахових виданнях України:</label>
+                    <div class="col-sm-3">
+                        <input type="number" asp-for="VidannyaFahUkr" class="form-control" min="0" />
+                    </div>
+                    <label asp-for="VidannyaNeFahUkr" class="col-sm-9">нефахових виданнях України:</label>
+                    <div class="col-sm-3">
+                        <input type="number" asp-for="VidannyaNeFahUkr" class="form-control" min="0" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label data-toggle="tooltip" data-placement="top" title="" class="control-label">Доповіді на наукових заходах із публікацією матеріалів та тез</label>
+                <div class="row">
+                    <label asp-for="MaterialScopus" class="col-sm-9">матеріали конференції внесені до Scopus чи Web of Science:</label>
+                    <div class="col-sm-3">
+                        <input type="number" asp-for="MaterialScopus" class="form-control" min="0" />
+                    </div>
+                    <label asp-for="MaterialMijnNeScopus" class="col-sm-9">матеріали міжнародної конференції не внесені до Scopus чи Web of Science:</label>
+                    <div class="col-sm-3">
+                        <input type="number" asp-for="MaterialMijnNeScopus" class="form-control" min="0" />
+                    </div>
+                    <label asp-for="MaterialUkrNeScopus" class="col-sm-9">матеріали всеукраїнської конференції не внесені до Scopus чи Web of Science:</label>
+                    <div class="col-sm-3">
+                        <input type="number" asp-for="MaterialUkrNeScopus" class="form-control" min="0" />
+                    </div>
+                    <label asp-for="TezMijn" class="col-sm-9">тези міжнародних конференцій:</label>
+                    <div class="col-sm-3">
+                        <input type="number" asp-for="TezMijn" class="form-control" min="0" />
+                    </div>
+                    <label asp-for="TezUkr" class="col-sm-9">тези всеукраїнських конференцій:</label>
+                    <div class="col-sm-3">
+                        <input type="number" asp-for="TezUkr" class="form-control" min="0" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <div class="row">
+                    <label asp-for="DopovidMijnarod" class="control-label col-sm-6">Доповідь на міжнародній науковій конференції поза межами України:</label>
+                    <div class="col-sm-6">
+                        <input type="number" asp-for="DopovidMijnarod" class="form-control" min="0" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <div class="row">
+                    <label asp-for="DopovidUkr" class="control-label col-sm-6">Доповідь на щорічній науково-технічній конференції НЛТУ України:</label>
+                    <div class="col-sm-6">
+                        <input type="number" asp-for="DopovidUkr" class="form-control" min="0" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <div class="row">
+                    <label asp-for="DopovidKafedra" class="control-label col-sm-6">Доповідь на науковому, науково-методичному семінарі кафедри:</label>
+                    <div class="col-sm-6">
+                        <input type="number" asp-for="DopovidKafedra" class="form-control" min="0" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <div class="row">
+                    <label asp-for="MijnarodDogovir" class="control-label col-sm-6">Підготовка проекту та укладання міжнародного договору:</label>
+                    <div class="col-sm-6">
+                        <input type="number" asp-for="MijnarodDogovir" class="form-control" min="0" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <div class="row">
+                    <label asp-for="OformlennyaPatent" class="control-label col-sm-6">Оформлення заявки на отримання патенту моделі:</label>
+                    <div class="col-sm-6">
+                        <input type="number" asp-for="OformlennyaPatent" class="form-control" min="0" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <div class="row">
+                    <label asp-for="OformlennyaKorMod" class="control-label col-sm-6">Оформлення заявки на отримання корисної моделі:</label>
+                    <div class="col-sm-6">
+                        <input type="number" asp-for="OformlennyaKorMod" class="form-control" min="0" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <div class="row">
+                    <label asp-for="OtrymannyaPatent" class="control-label col-sm-6">Отримання патенту:</label>
+                    <div class="col-sm-6">
+                        <input type="number" asp-for="OtrymannyaPatent" class="form-control" min="0" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <div class="row">
+                    <label asp-for="OtrymannyaKorMod" class="control-label col-sm-6">Отримання корисної моделі:</label>
+                    <div class="col-sm-6">
+                        <input type="number" asp-for="OtrymannyaKorMod" class="form-control" min="0" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group" id="content-box">
+                <label asp-for="RecenzStattya" class="control-label">Рецензування статей</label>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="RecenzStattyaN" class="col-sm-4">Рецензій:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="RecenzStattyaN" class="form-control" min="0" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label asp-for="RecenzStattya" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.RecenzStattya
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="RecenzDesertDoktor" class="control-label">
+                    Рецензування дисертації, автореферату дисертації (за наявності підтвердження) – кандидатської
+                </label>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="RecenzDesertDoktorN" class="col-sm-4">Відгуків:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="RecenzDesertDoktorN" class="form-control" min="0" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label asp-for="RecenzDesertDoktor" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.RecenzDesertDoktor
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="RecenzDesertKandidat" class="control-label">
+                    Рецензування дисертації, автореферату дисертації (за наявності підтвердження) – докторської
+                </label>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="RecenzDesertKandidatN" class="col-sm-4">Відгуків:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="RecenzDesertKandidatN" class="form-control" min="0" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label asp-for="RecenzDesertKandidat" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.RecenzDesertKandidat
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="OponDesertKandidat" class="control-label">
+                    Опонування дисертацій – кандидатських
+                </label>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="OponDesertKandidatN" class="col-sm-4">Опонувань:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="OponDesertKandidatN" class="form-control" min="0" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label asp-for="OponDesertKandidat" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.OponDesertKandidat
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="OponDesertDoktor" class="control-label">
+                    Опонування дисертацій – кандидатських
+                </label>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="OponDesertDoktorN" class="col-sm-4">Опонувань:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="OponDesertDoktorN" class="form-control" min="0" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label asp-for="OponDesertDoktor" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.OponDesertDoktor
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="KerivStud" data-toggle="tooltip" data-placement="top" title="" class="control-label">
+                    Керівництво науково-дослідною роботою студентів:
+                </label>
+                <div class="row">
+
+                    <label asp-for="KerivStudStattyaN" class="col-sm-9">Наукова стаття:</label>
+                    <div class="col-sm-3">
+                        <input type="number" asp-for="KerivStudStattyaN" class="form-control" min="0" />
+                    </div>
+
+
+                    <label asp-for="KerivStudKonkursN" class="col-sm-9">Робота на конкурс:</label>
+                    <div class="col-sm-3">
+                        <input type="number" asp-for="KerivStudKonkursN" class="form-control" min="0" />
+                    </div>
+
+                    <label asp-for="KerivStudOhoronDocN" class="col-sm-9">Заявка на видачу охоронних документів:</label>
+                    <div class="col-sm-3">
+                        <input type="number" asp-for="KerivStudOhoronDocN" class="form-control" min="0" />
+                    </div>
+
+                    <label asp-for="KerivStudTezDopovidN" class="col-sm-9">Підготовка та опублікування тез доповіді на конференції:</label>
+                    <div class="col-sm-3">
+                        <input type="number" asp-for="KerivStudTezDopovidN" class="form-control" min="0" />
+                    </div>
+
+                    <label asp-for="KerivStud" class="col-sm-9 control-label">Годин:</label>
+                    <div class="col-sm-3">
+                        @Model.KerivStud
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="PidgotovkaStud" data-toggle="tooltip" data-placement="top" title="" class="control-label">Підготовка студентів до участі у: </label>
+                <div class="row">
+
+                    <label asp-for="PidgotovkaStudMijn" class="col-sm-9">Всеукраїнських та міжнародних студентських олімпіадах:</label>
+                    <div class="col-sm-3">
+                        <input type="number" asp-for="PidgotovkaStudMijn" class="form-control" min="0" />
+                    </div>
+
+                    <label asp-for="PidgotovkaStudMijnUkr" class="col-sm-9">Всеукраїнських та міжнародних конкурсах, що проходять в Україні:</label>
+                    <div class="col-sm-3">
+                        <input type="number" asp-for="PidgotovkaStudMijnUkr" class="form-control" min="0" />
+                    </div>
+
+                    <label asp-for="PidgotovkaStudMijnZaKordonom" class="col-sm-9">Міжнародних конкурсах, що проходять за кордоном:</label>
+                    <div class="col-sm-3">
+                        <input type="number" asp-for="PidgotovkaStudMijnZaKordonom" class="form-control" min="0" />
+                    </div>
+
+                    <label asp-for="PidgotovkaStud" class="col-sm-9 control-label">Годин:</label>
+                    <div class="col-sm-3">
+                        @Model.PidgotovkaStud
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="KerivNaukStud" data-toggle="tooltip" data-placement="top" title="" class="control-label">Керівництво науковою роботою студентів, які здобули перемогу у </label>
+                <div class="row">
+
+                    <label asp-for="KerivNaukStudVseukrain" class="col-sm-9">Всеукраїнському конкурсі:</label>
+                    <div class="col-sm-3">
+                        <input type="number" asp-for="KerivNaukStudVseukrain" class="form-control" min="0" />
+                    </div>
+
+                    <label asp-for="KerivNaukStudMijnarodUkr" class="col-sm-9">Міжнародному конкурсі, який проходив в Україні:</label>
+                    <div class="col-sm-3">
+                        <input type="number" asp-for="KerivNaukStudMijnarodUkr" class="form-control" min="0" />
+                    </div>
+
+                    <label asp-for="KerivNaukStudMijnarodZaKordon" class="col-sm-9">Міжнародному конкурсі, який проходив за кордоном:</label>
+                    <div class="col-sm-3">
+                        <input type="number" asp-for="KerivNaukStudMijnarodZaKordon" class="form-control" min="0" />
+                    </div>
+
+                    <label asp-for="KerivNaukStud" class="col-sm-9 control-label">Годин:</label>
+                    <div class="col-sm-3">
+                        @Model.KerivNaukStud
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="KerivSudNaukGurtok" data-toggle="tooltip" data-placement="top" title="" class="control-label col-sm-10">
+                            Керівництво студентським науковим гуртком, робота якого підтверджується наказом або розпорядженням
+                        </label>
+                        <div class="col-sm-2">
+                            <input type="checkbox" asp-for="KerivSudNaukGurtokBool" class="form-control" min="0" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label asp-for="KerivSudNaukGurtok" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.KerivSudNaukGurtok
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="NaukEksped" class="control-label">
+                    Участь в наукових експедиціях
+                </label>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="NaukEkspedNDniv" class="col-sm-4">Днів:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="NaukEkspedNDniv" class="form-control" min="0" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label asp-for="NaukEksped" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.NaukEksped
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="VistavkaNaukDosMijnarod" data-toggle="tooltip" data-placement="top" title="" class="control-label">Участь у виставках наукових досягнень </label>
+                <div class="row">
+
+                    <label asp-for="VistavkaNaukDosMijnarod" class="col-sm-9">Міжнародних:</label>
+                    <div class="col-sm-3">
+                        <input type="number" asp-for="VistavkaNaukDosMijnarod" class="form-control" min="0" />
+                    </div>
+
+                    <label asp-for="VistavkaNaukDosVseukrain" class="col-sm-9">Всеукраїнських:</label>
+                    <div class="col-sm-3">
+                        <input type="number" asp-for="VistavkaNaukDosVseukrain" class="form-control" min="0" />
+                    </div>
+
+                    <label asp-for="VistavkaNaukDosRegion" class="col-sm-9">Регіональних:</label>
+                    <div class="col-sm-3">
+                        <input type="number" asp-for="VistavkaNaukDosRegion" class="form-control" min="0" />
+                    </div>
+
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Оновити" class="btn btn-default" />
+            </div>
+        </div>
+    </form>
+</div>
+

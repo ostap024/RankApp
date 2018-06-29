@@ -1,0 +1,344 @@
+﻿@model RankApp.Data.MetodRob
+
+<div id="AddMetod" class="tab-pane fade">
+    <h3>Методична робота</h3>
+    <form asp-controller="Home" asp-action="UpdateMetodRob" asp-route-id="@Model.Id">
+        <div>
+            <div class="form-group" id="content-box">
+                <div class="row">
+                    <label asp-for="VidannyaPidruch" class="control-label col-sm-6">Видання підручника, навчального посібника, словника, довідника за погодженням з НМР університету:</label>
+                    <div class="col-sm-6">
+                        <input type="number" asp-for="VidannyaPidruch" class="form-control" min="0" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="RecenzPidruch" class="control-label">Рецензування підручників, навчальних посібників тощо </label>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="RecenzPidruchNStor" class="col-sm-4">Сторінок:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="RecenzPidruchNStor" class="form-control" min="0" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label asp-for="RecenzPidruch" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.RecenzPidruch
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <div class="row">
+                    <label asp-for="VidannyaRozrobok" class="control-label col-sm-6">Видання навчально-методичних розробок :</label>
+                    <div class="col-sm-6">
+                        <input type="number" asp-for="VidannyaRozrobok" class="form-control" min="0" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="RecenzRozrobok" class="control-label">Рецензування навчально-методичних розробок:</label>
+                <div class="row">
+
+                    <div class="col-sm-6">
+                        <label asp-for="RecenzRozrobokNStor" class="col-sm-4">Сторінок:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="RecenzRozrobokNStor" class="form-control" min="0" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label asp-for="RecenzRozrobok" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.RecenzRozrobok
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="EkspertDyplom" class="control-label">Проведення експертизи конкурсних дипломних проектів і робіт:</label>
+                <div class="row">
+
+                    <div class="col-sm-6">
+                        <label asp-for="EkspertDyplomNRobit" class="col-sm-4">Робіт:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="EkspertDyplomNRobit" class="form-control" min="0" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label asp-for="EkspertDyplom" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.EkspertDyplom
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <div class="row">
+                    <label asp-for="PidgotovkaMater" class="control-label col-sm-6">Підготовка матеріалів щодо ліцензування чи акредитації спеціальності:</label>
+                    <div class="col-sm-6">
+                        <input type="number" asp-for="PidgotovkaMater" class="form-control" min="0" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="UchastRobGrup" data-toggle="tooltip" data-placement="top" title=" " class="control-label">
+                    Участь у роботі робочих груп та науково-методичних семінарів, які організовуються МОН України
+                </label>
+                <div class="row">
+
+                    <div class="col-sm-6">
+                        <label asp-for="UchastRobGrupNDniv" class="col-sm-4">Днів:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="UchastRobGrupNDniv" class="form-control" min="0" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label asp-for="UchastRobGrup" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.UchastRobGrup
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="PidgotovkaLekciiBakalavr" data-toggle="tooltip" data-placement="top" title=" " class="control-label">
+                    Підготовка до навчальних занять - лекції для бакалаврів і спеціалістів:
+                </label>
+                <div class="row">
+
+                    <div class="col-sm-6">
+                        <label asp-for="PidgotovkaLekciiBakalavrN" class="col-sm-4">Лекцій:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="PidgotovkaLekciiBakalavrN" class="form-control" min="0" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label asp-for="PidgotovkaLekciiBakalavr" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.PidgotovkaLekciiBakalavr
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="PidgotovkaLekciiMagistr" data-toggle="tooltip" data-placement="top" title=" " class="control-label">
+                    Підготовка до навчальних занять - лекції для магістрів, аспірантів і слухачів підвищення кваліфікації:
+                </label>
+                <div class="row">
+
+                    <div class="col-sm-6">
+                        <label asp-for="PidgotovkaLekciiMagistrN" class="col-sm-4">Лекцій:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="PidgotovkaLekciiMagistrN" class="form-control" min="0" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label asp-for="PidgotovkaLekciiMagistr" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.PidgotovkaLekciiMagistr
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="PidgotovkaLabPrakt" data-toggle="tooltip" data-placement="top" title=" " class="control-label">
+                    Підготовка до навчальних занять - лабораторних, практичних, семінарських занять, тощо:
+                </label>
+                <div class="row">
+
+                    <div class="col-sm-6">
+                        <label asp-for="PidgotovkaLabPrakt" class="col-sm-4">Лекцій:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="PidgotovkaLabPrakt" class="form-control" min="0" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label asp-for="PidgotovkaLabPrakt" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.PidgotovkaLabPrakt
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <div class="row">
+                    <label asp-for="RozrobkaVNS" class="control-label col-sm-6">Розроблення та розміщення у ВНС університету комплекту електронного методичного забезпечення навчальної дисципліни:</label>
+                    <div class="col-sm-6">
+                        <input type="number" asp-for="RozrobkaVNS" class="form-control" min="0" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <div class="row">
+                    <label asp-for="RozrobkaLab" class="control-label col-sm-6">Розроблення та впровадження нових лабораторних робіт, стендів:</label>
+                    <div class="col-sm-6">
+                        <input type="number" asp-for="RozrobkaLab" class="form-control" min="0" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <div class="row">
+                    <label asp-for="RozrobkaNavchMat" class="control-label col-sm-6">Розроблення та впровадження наочних навчальних ма-теріалів:</label>
+                    <div class="col-sm-6">
+                        <input type="number" asp-for="RozrobkaNavchMat" class="form-control" min="0" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <div class="row">
+                    <label asp-for="RozrobkaInterMet" class="control-label col-sm-6">Розроблення інтерактивних методів навчання:</label>
+                    <div class="col-sm-6">
+                        <input type="number" asp-for="RozrobkaInterMet" class="form-control" min="0" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="PerevirkaOlimp" data-toggle="tooltip" data-placement="top" title=" " class="control-label">
+                    Перевірка завдань учасників олімпіади:
+                </label>
+                <div class="row">
+
+                    <div class="col-sm-6">
+                        <label asp-for="PerevirkaOlimpNRobit" class="col-sm-4">Робіт:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="PerevirkaOlimpNRobit" class="form-control" min="0" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label asp-for="PerevirkaOlimp" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.PerevirkaOlimp
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="PidgotovkaDopovidTaVistup" data-toggle="tooltip" data-placement="top" title=" " class="control-label">
+                    Підготовка доповіді та виступ на методичному семінарі кафедри:
+                </label>
+                <div class="row">
+
+                    <div class="col-sm-6">
+                        <label asp-for="PidgotovkaDopovidTaVistupNVistup" class="col-sm-4">Виступів:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="PidgotovkaDopovidTaVistupNVistup" class="form-control" min="0" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label asp-for="PidgotovkaDopovidTaVistup" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.PidgotovkaDopovidTaVistup
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <div class="row">
+                    <label asp-for="VzaemVidvid" class="control-label col-sm-6">Взаємне відвідування занять, відвідування відкритих занять:</label>
+                    <div class="col-sm-6">
+                        <input type="number" asp-for="VzaemVidvid" class="form-control" min="0" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group" id="content-box">
+                <label asp-for="PidgotovkaRecenzVidkr" data-toggle="tooltip" data-placement="top" title=" " class="control-label">
+                    Підготовка рецензії (відгуку) на відкрите заняття:
+                </label>
+                <div class="row">
+
+                    <div class="col-sm-6">
+                        <label asp-for="PidgotovkaRecenzVidkrNZanat" class="col-sm-4">Занять:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="PidgotovkaRecenzVidkrNZanat" class="form-control" min="0" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label asp-for="PidgotovkaRecenzVidkr" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.PidgotovkaRecenzVidkr
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <div class="row">
+                    <label asp-for="RozrobkaZavdan" class="control-label col-sm-6">Розроблення завдань із використанням інноваційних освітніх методів (технологій) навчання:</label>
+                    <div class="col-sm-6">
+                        <input type="number" asp-for="RozrobkaZavdan" class="form-control" min="0" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label class="control-label">Стажування</label>
+                <div class="row">
+                    <label asp-for="StagBezVidr" class="col-sm-10">без відриву від основної роботи:</label>
+                    <div class="col-sm-2">
+                        <input type="checkbox" asp-for="StagBezVidrBool" class="form-control" />
+                    </div>
+                    <label asp-for="StagZVidr" class="col-sm-10">з відривом від основної роботи:</label>
+                    <div class="col-sm-2">
+                        <input type="checkbox" asp-for="StagZVidrBool" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <div class="row">
+                    <label asp-for="PidvKval" class="control-label col-sm-6">Підвищення кваліфікації:</label>
+                    <div class="col-sm-6">
+                        <input type="number" asp-for="PidvKval" class="form-control" min="0" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="PerekladStat" data-toggle="tooltip" data-placement="top" title=" " class="control-label">
+                    Переклад навчальних та наукових статей на іноземну мову (за дорученням ректорату та директорів інститутів)
+                </label>
+                <div class="row">
+
+                    <div class="col-sm-6">
+                        <label asp-for="PerekladStatNStor" class="col-sm-4">Сторінок:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="PerekladStatNStor" class="form-control" min="0" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label asp-for="PerekladStat" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.PerekladStat
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="PidvKval" data-toggle="tooltip" data-placement="top" title="" class="control-label">Підвищення кваліфікації</label>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label asp-for="PidvKval" class="col-sm-6">Годин:</label>
+                        <div class="col-sm-6">
+                            <input type="number" asp-for="PidvKval" class="form-control" min="0" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="form-group">
+                <input type="submit" value="Оновити" class="btn btn-default" />
+            </div>
+        </div>
+    </form>
+</div>
+

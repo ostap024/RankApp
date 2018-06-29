@@ -1,0 +1,18 @@
+﻿@model IEnumerable<RankApp.Models.Navantagennya>
+@{
+    ViewBag.Title = "Всі навантаження";
+}
+<a asp-action="Create">Додати навантаження</a>
+<table class="table">
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Vikladach   @item.Nazva   @item.Grupa-@item.Kurs</td>
+            <td>
+                <a asp-action="Details" asp-controller="Home" asp-route-id="@item.Id">Детальніше</a> |
+                <a asp-action="Edit" asp-controller="Home" asp-route-id="@item.Id">Змінити</a> |
+                <a asp-action="Delete" asp-controller="Home" asp-route-id="@item.Id">Видалити</a>
+            </td>
+        </tr>
+    }
+</table>

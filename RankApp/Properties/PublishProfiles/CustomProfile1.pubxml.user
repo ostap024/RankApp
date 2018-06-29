@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6yuJnrOj7k6r//vo2+JJdQAAAAACAAAAAAAQZgAAAAEAACAAAABxHyVPCJT2W9WwfLM2oB1Hi8+xXBKQ75ebHn6uUbuDggAAAAAOgAAAAAIAACAAAACD81ZyEnK96pDoGOLkorQG3ox3LjrEoZmE/Z4SrM2H3yAAAADjR+W3MCEJ6lFryepiaaLjqzE8XghmBTjAdEQmd4X2AEAAAAA5wG3N5+WQhvekyFpQv9Tfero70eW2F73WivDDebx6Vdv/PCg+qRYf4piwYj1dygPl0cw0VtEcuuYDY9nWpieG</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Data Source=SQL6002.site4now.net;Initial Catalog=DB_A3B362_ostap024;User Id=DB_A3B362_ostap024_admin;Password=PoweredbyASUS3;</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="RankApp.Data.ApplicationDbContext">
+      <Value>Data Source=SQL6002.site4now.net;Initial Catalog=DB_A3B362_ostap024;User Id=DB_A3B362_ostap024_admin;Password=PoweredbyASUS3;</Value>
+    </EFMigrations>
+    <EFMigrations Include="RankApp.Models.NavantagennyaContext">
+      <Value>Data Source=SQL6002.site4now.net;Initial Catalog=DB_A3B362_ostap024;User Id=DB_A3B362_ostap024_admin;Password=PoweredbyASUS3;</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,336 @@
+﻿@model RankApp.Data.OrgRob
+
+<div id="AddOrg" class="tab-pane fade">
+    <h3>Організаційна робота</h3>
+    <form asp-controller="Home" asp-action="UpdateOrgRob" asp-route-id="@Model.Id">
+        <div>
+            <div class="form-group" id="content-box">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="OrgZagalUniverZahid" data-toggle="tooltip" data-placement="top" title="" class="control-label col-sm-10">
+                            Організація та проведення загальноуніверситетських освітньо-виховних заходів
+                        </label>
+                        <div class="col-sm-2">
+                            <input type="checkbox" asp-for="OrgZagalUniverZahidBool" class="form-control" min="0" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label asp-for="OrgZagalUniverZahid" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.OrgZagalUniverZahid
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <div class="row">
+
+                    <div class="col-sm-6">
+                        <label asp-for="OrgKafedraZahid" data-toggle="tooltip" data-placement="top" title="" class="control-label col-sm-10">
+                            Організація та проведення освітньо-виховних заходів кафедри
+                        </label>
+                        <div class="col-sm-2">
+                            <input type="checkbox" asp-for="OrgKafedraZahidBool" class="form-control" min="0" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label asp-for="OrgKafedraZahid" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.OrgKafedraZahid
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="ProvedennyaBesid" data-toggle="tooltip" data-placement="top" title="" class="control-label col-sm-10">
+                            Проведення тематичних бесід, диспутів тощо
+                        </label>
+                        <div class="col-sm-2">
+                            <input type="checkbox" asp-for="ProvedennyaBesidBool" class="form-control" min="0" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label asp-for="ProvedennyaBesid" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.ProvedennyaBesid
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="OrganizaciaEkskurs" data-toggle="tooltip" data-placement="top" title="" class="control-label col-sm-10">
+                            Організація та проведення екскурсій
+                        </label>
+                        <div class="col-sm-2">
+                            <input type="checkbox" asp-for="OrganizaciaEkskursBool" class="form-control" min="0" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label asp-for="OrganizaciaEkskurs" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.OrganizaciaEkskurs
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="RozrobkaMaterialivZahid" data-toggle="tooltip" data-placement="top" title="" class="control-label">
+                    Розробка фото-, аудіо- та відеоматеріалів для проведення освітньо-виховних заходів
+                </label>
+                <div class="row">
+
+                    <label asp-for="RozrobkaMaterialivZahidPhotoBool" class="col-sm-10">Фото-та аудіо матеріали:</label>
+                    <div class="col-sm-2">
+                        <input type="checkbox" asp-for="RozrobkaMaterialivZahidPhotoBool" class="form-control" min="0" />
+                    </div>
+
+                    <label asp-for="RozrobkaMaterialivZahidVideoBool" class="col-sm-10">Вчений секретар:</label>
+                    <div class="col-sm-2">
+                        <input type="checkbox" asp-for="RozrobkaMaterialivZahidVideoBool" class="form-control" min="0" />
+                    </div>
+
+                    <label asp-for="RozrobkaMaterialivZahidPrezentaciaBool" class="col-sm-10">Член ради:</label>
+                    <div class="col-sm-2">
+                        <input type="checkbox" asp-for="RozrobkaMaterialivZahidPrezentaciaBool" class="form-control" min="0" />
+                    </div>
+
+                    <label asp-for="RozrobkaMaterialivZahid" class="col-sm-4 control-label">Годин:</label>
+                    <div class="col-sm-8">
+                        @Model.RozrobkaMaterialivZahid
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="RobotaVchenaRada" data-toggle="tooltip" data-placement="top" title="" class="control-label">
+                    Робота у Вченій раді університету
+                </label>
+                <div class="row">
+                    <label asp-for="RobotaVchenaRadaGolovaBool"  class="col-sm-10">Голова ради, заступник голови:</label>
+                    <div class="col-sm-2">
+                        <input type="checkbox" asp-for="RobotaVchenaRadaGolovaBool" class="form-control" min="0" />
+                    </div>
+                    <label asp-for="RobotaVchenaRadaSekretarBool"  class="col-sm-10">Вчений секретар:</label>
+                    <div class="col-sm-2">
+                        <input type="checkbox" asp-for="RobotaVchenaRadaSekretarBool" class="form-control" min="0" />
+                    </div>
+                    <label asp-for="RobotaVchenaRadaClenBool"  class="col-sm-10">Член ради:</label>
+                    <div class="col-sm-2">
+                        <input type="checkbox" asp-for="RobotaVchenaRadaClenBool" class="form-control" min="0" />
+                    </div>
+                    <label asp-for="RobotaVchenaRada" class="col-sm-4 control-label">Годин:</label>
+                    <div class="col-sm-8">
+                        @Model.RobotaVchenaRada
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="KerivnukKafedra" data-toggle="tooltip" data-placement="top" title="" class="control-label col-sm-10">
+                            Керівництво кафедрою
+                        </label>
+                        <div class="col-sm-2">
+                            <input type="checkbox" asp-for="KerivnukKafedraBool" class="form-control" min="0" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label asp-for="KerivnukKafedra" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.KerivnukKafedra
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="ObovjazokKafedra" data-toggle="tooltip" data-placement="top" title="" class="control-label">
+                    Виконання обов`язків
+                </label>
+                <div class="row">
+                    <label asp-for="ObovjazokKafedraZastupnikBool" class="col-sm-10">Заступник завідувача кафедри:</label>
+                    <div class="col-sm-2">
+                        <input type="checkbox" asp-for="ObovjazokKafedraZastupnikBool" class="form-control" min="0" />
+                    </div>
+                    <label asp-for="ObovjazokKafedraSekretarBool" class="col-sm-10">Секретар кафедри:</label>
+                    <div class="col-sm-2">
+                        <input type="checkbox" asp-for="ObovjazokKafedraSekretarBool" class="form-control" min="0" />
+                    </div>
+                    <label asp-for="RobotaVchenaRada" class="col-sm-4 control-label">Годин:</label>
+                    <div class="col-sm-8">
+                        @Model.RobotaVchenaRada
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="RobotaTrudKolektiv" data-toggle="tooltip" data-placement="top" title="" class="control-label">
+                    Робота у раді трудового колективу
+                </label>
+                <div class="row">
+                    <label asp-for="RobotaTrudKolektivGolovaBool" class="col-sm-10">Голова:</label>
+                    <div class="col-sm-2">
+                        <input type="checkbox" asp-for="RobotaTrudKolektivGolovaBool" class="form-control" min="0" />
+                    </div>
+                    <label asp-for="RobotaTrudKolektivZastupnikBool" class="col-sm-10">Заступник голови:</label>
+                    <div class="col-sm-2">
+                        <input type="checkbox" asp-for="RobotaTrudKolektivZastupnikBool" class="form-control" min="0" />
+                    </div>
+                    <label asp-for="RobotaTrudKolektivSekretarBool" class="col-sm-10">Секретар:</label>
+                    <div class="col-sm-2">
+                        <input type="checkbox" asp-for="RobotaTrudKolektivSekretarBool" class="form-control" min="0" />
+                    </div>
+                    <label asp-for="RobotaTrudKolektivClenBool" class="col-sm-10">Член ради:</label>
+                    <div class="col-sm-2">
+                        <input type="checkbox" asp-for="RobotaTrudKolektivClenBool" class="form-control" min="0" />
+                    </div>
+                    <label asp-for="RobotaTrudKolektiv" class="col-sm-4 control-label">Годин:</label>
+                    <div class="col-sm-8">
+                        @Model.RobotaTrudKolektiv
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="RobotaRevizia" data-toggle="tooltip" data-placement="top" title="" class="control-label">
+                    Робота в ревізійній комісії профкому
+                </label>
+                <div class="row">
+                    <label asp-for="RobotaReviziaGolovaBool" class="col-sm-10">Голова:</label>
+                    <div class="col-sm-2">
+                        <input type="checkbox" asp-for="RobotaReviziaGolovaBool" class="form-control" min="0" />
+                    </div>
+                    <label asp-for="RobotaReviziaZastupnikBool" class="col-sm-10">Заступник голови:</label>
+                    <div class="col-sm-2">
+                        <input type="checkbox" asp-for="RobotaReviziaZastupnikBool" class="form-control" min="0" />
+                    </div>
+
+                    <label asp-for="RobotaReviziaSekretarBool" class="col-sm-10">Секретар:</label>
+                    <div class="col-sm-2">
+                        <input type="checkbox" asp-for="RobotaReviziaSekretarBool" class="form-control" min="0" />
+                    </div>
+                    <label asp-for="RobotaRevizia" class="col-sm-4 control-label">Годин:</label>
+                    <div class="col-sm-8">
+                        @Model.RobotaRevizia
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="UchastProfOrient" data-toggle="tooltip" data-placement="top" title="" class="control-label col-sm-10">
+                            Участь у профорієнтаційній роботі та довузівській підготовці
+                        </label>
+                        <div class="col-sm-2">
+                            <input type="checkbox" asp-for="UchastProfOrientBool" class="form-control" min="0" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label asp-for="UchastProfOrient" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.UchastProfOrient
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="UchastProfOrient" data-toggle="tooltip" data-placement="top" title="" class="control-label col-sm-10">
+                            Виконання роботи секретаря приймальної комісії
+                        </label>
+                        <div class="col-sm-2">
+                            <input type="checkbox" asp-for="UchastProfOrientBool" class="form-control" min="0" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label asp-for="UchastProfOrient" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.UchastProfOrient
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="SekretarNaukMetodSeminar" class="control-label">
+                    Секретар науково-методичних семінарів кафедри
+                </label>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="SekretarNaukMetodSeminarNZasid" class="col-sm-4">Засідань семінару:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="SekretarNaukMetodSeminarNZasid" class="form-control" min="0" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label asp-for="SekretarNaukMetodSeminar" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.SekretarNaukMetodSeminar
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="PidtrumkaWEB" data-toggle="tooltip" data-placement="top" title="" class="control-label col-sm-10">
+                            Підтримка WEB-сторінки  кафедри
+                        </label>
+                        <div class="col-sm-2">
+                            <input type="checkbox" asp-for="PidtrumkaWEBBool" class="form-control" min="0" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label asp-for="PidtrumkaWEB" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.PidtrumkaWEB
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="ZasidannyaKafedra" class="control-label">
+                    Участь у засіданнях  кафедри
+                </label>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="ZasidannyaKafedraNZasid" class="col-sm-4">Засідань кафедри:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="ZasidannyaKafedraNZasid" class="form-control" min="0" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label asp-for="ZasidannyaKafedra" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.ZasidannyaKafedra
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="EstetKaredra" data-toggle="tooltip" data-placement="top" title="" class="control-label col-sm-10">
+                            Естетичне оформлення кафедри, приміщень
+                        </label>
+                        <div class="col-sm-2">
+                            <input type="checkbox" asp-for="EstetKaredraBool" class="form-control" min="0" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label asp-for="EstetKaredra" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.EstetKaredra
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Оновити" class="btn btn-default" />
+            </div>
+        </div>
+    </form>
+</div>
+

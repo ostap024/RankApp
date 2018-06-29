@@ -1,0 +1,25 @@
+﻿@model IEnumerable<RankApp.Data.RegisterBuf>
+@{
+    ViewBag.Title = "Всі навантаження";
+}
+<table class="table">
+    @{
+        if (Model.Count() > 0)
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.PIB   @item.RegCode</td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td><p>Список кодів реєстрації пустий</p></td>
+
+            </tr>
+
+        }
+    }
+</table>

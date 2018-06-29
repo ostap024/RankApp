@@ -1,0 +1,25 @@
+﻿@model RankApp.Data.MasterNavant
+
+<div id="AllRating" class="tab-pane fade">
+    <h3>Рейтинг всіх викладачів</h3>
+
+    <table class="table">
+
+        @foreach (var item in Model.NavchRob)
+        {
+
+            var buf3 = Model.OrgRob.SingleOrDefault(x => x.User == item.User);
+            double? rating = 0;
+            rating = item.Sum.GetValueOrDefault() + rating.GetValueOrDefault();
+            var buf = Model.MetodRob.SingleOrDefault(x => x.User == item.User);
+            rating = buf.Sum.GetValueOrDefault() + rating.GetValueOrDefault();
+            var buf1 = Model.NaukRob.SingleOrDefault(x => x.User == item.User);
+            rating = buf1.Sum.GetValueOrDefault() + rating.GetValueOrDefault();
+            var buf2 = Model.OrgRob.SingleOrDefault(x => x.User == item.User);
+            rating = buf2.Sum.GetValueOrDefault() + rating.GetValueOrDefault();
+            <tr>
+            <td>@item.PIB Рейтинг: @rating</td>
+            </tr>
+        }
+    </table>
+</div>

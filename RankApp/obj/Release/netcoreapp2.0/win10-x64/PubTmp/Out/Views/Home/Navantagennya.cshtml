@@ -1,0 +1,26 @@
+﻿@model IEnumerable<RankApp.Data.Navantagennya>
+
+    <div id="MyNavant" class="tab-pane fade in active">
+        <h3>Мої навантаження</h3>
+        <table class="table">
+
+            @if (ViewBag.userName != null)
+            {
+                foreach (var item in Model.OrderBy(i => i.NumberPP).Where(x => x.Vikladach.Contains(ViewBag.userName)))
+                {
+                    <tr>
+                        <td>@item.Vikladach   @item.Nazva   @item.Grupa-@item.Kurs</td>
+                        <td>
+                            <a asp-action="Details" asp-controller="Home" asp-route-id="@item.Id">Детальніше</a> |
+                            <a asp-action="Edit" asp-controller="Home" asp-route-id="@item.Id">Змінити</a> |
+                            <a asp-action="Delete" asp-controller="Home" asp-route-id="@item.Id">Видалити</a>
+                        </td>
+                    </tr>
+                }
+            }
+
+
+        </table>
+
+    </div>
+

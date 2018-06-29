@@ -1,0 +1,34 @@
+﻿@using RankApp.Data
+@model RankApp.Models.RegistrationViewModel.RegistrationViewModel
+
+@{
+    // ViewBag.Title = "Всі навантаження";
+}
+
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" asp-controller="Home" asp-action="Registration"
+              asp-route-returnUrl="@Model.ReturnUrl">
+            <div asp-validation-summary="ModelOnly"></div>
+            <h4>Create a new account.</h4>
+            @{
+                <label>Викладач </label>
+                @Html.DropDownListFor(x => x.PIB,
+               (IEnumerable<SelectListItem>)ViewBag.listofitems,
+                    new
+                    {
+                        @class = "form-control selectpicker",
+                        @Value = @Model.PIB,
+                        data_live_search = "true"
+                    })
+
+            }
+            <button type="submit" class="btn btn-default">Зареєструвати</button>
+        </form>
+    </div>
+</div>
+
+
+
+

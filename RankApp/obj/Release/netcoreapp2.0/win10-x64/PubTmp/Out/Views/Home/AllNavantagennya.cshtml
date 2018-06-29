@@ -1,0 +1,20 @@
+﻿@model IEnumerable<RankApp.Data.Navantagennya>
+
+    <div id="AllNavant" class="tab-pane fade in active">
+        <h3>Всі навантаження</h3>
+        <table class="table">
+            @foreach (var item in Model.OrderBy(i => i.NumberPP))
+            {
+                <tr>
+                    <td>@item.Vikladach   @item.Nazva   @item.Grupa-@item.Kurs</td>
+                    <td>
+                        <a asp-action="Details" asp-controller="Home" asp-route-id="@item.Id">Детальніше</a> |
+                        <a asp-action="Edit" asp-controller="Home" asp-route-id="@item.Id">Змінити</a> |
+                        <a asp-action="Delete" asp-controller="Home" asp-route-id="@item.Id">Видалити</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+
+

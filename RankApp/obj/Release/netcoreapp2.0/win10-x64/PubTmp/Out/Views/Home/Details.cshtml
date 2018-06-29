@@ -1,0 +1,26 @@
+﻿@model RankApp.Data.Navantagennya
+@{
+    ViewBag.Title = Model.Vikladach + " " + Model.Nazva + Model.Grupa+"-"+Model.Kurs;
+}
+<h2>@Model.Vikladach  @Model.Nazva  @Model.Grupa-@Model.Kurs</h2>
+<div>
+    <dl class="dl-horizontal">
+        <dt>Номер дисципліни</dt>
+        <dd>@Model.NumberDisc</dd>
+
+        <dt>Назва дисципліни</dt>
+        <dd>@Model.Nazva</dd>
+
+        <dt>Група</dt>
+        <dd>@Model.Grupa</dd>
+
+        <dt>Курс</dt>
+        <dd>@Model.Kurs</dd>
+
+        <dt>Кількість студентів</dt>
+        <dd>@Model.Studentiv</dd>
+
+        <dt>Кількість груп</dt>
+        <dd>@Model.Grup</dd>
+    </dl>
+</div>

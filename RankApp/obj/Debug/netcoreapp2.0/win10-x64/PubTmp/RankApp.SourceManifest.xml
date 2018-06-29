@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\Users\ostap\source\repos\RankApp\RankApp\obj\Debug\netcoreapp2.0\win10-x64\PubTmp\Out\" />
+  <dbfullsql path="C:\Users\ostap\source\repos\RankApp\RankApp\obj\Debug\netcoreapp2.0\win10-x64\PubTmp\EFSQLScripts\RankApp.Data.ApplicationDbContext.sql" />
+  <dbfullsql path="C:\Users\ostap\source\repos\RankApp\RankApp\obj\Debug\netcoreapp2.0\win10-x64\PubTmp\EFSQLScripts\RankApp.Models.NavantagennyaContext.sql" />
+</sitemanifest>

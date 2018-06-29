@@ -1,0 +1,511 @@
+﻿@model RankApp.Data.NavchRob
+
+<div id="AddNavch" class="tab-pane fade">
+    <h3>Навчальна робота</h3>
+    <form asp-controller="Home" asp-action="UpdateNavchRob" asp-route-id="@Model.Id">
+        <div>
+            <div class="form-group" id="content-box">
+                <label asp-for="Spivbesida" class="control-label">Проведення співбесіди зі вступниками </label>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="SpivbesidaNStud" class="col-sm-4">Вступників:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="SpivbesidaNStud" class="form-control" min="0" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label asp-for="Spivbesida" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.Spivbesida
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="EkzamenUsn" data-toggle="tooltip" data-placement="top" title="Проведення випускних екзаменів довузівської підготовки та вступних екзаменів до вищих навчальних закладів " class="control-label">Проведення усних екзаменів</label>
+                <div class="row">
+
+                    <div class="col-sm-6">
+                        <label asp-for="EkzamenUsnNStud" class="col-sm-4">Вступників:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="EkzamenUsnNStud" class="form-control" min="0" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label asp-for="EkzamenUsn" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.EkzamenUsn
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="EkzamenUkrMovaDyktant" class="control-label">Проведення екзаменів - диктант</label>
+                <div class="row">
+
+                    <div class="col-sm-4">
+                        <label asp-for="EkzamenUkrMovaDyktantNGrup" class="col-sm-4">Груп:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="EkzamenUkrMovaDyktantNGrup" class="form-control" min="0" />
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <label asp-for="EkzamenUkrMovaDyktantNRobit" class="col-sm-4">Робіт:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="EkzamenUkrMovaDyktantNRobit" class="form-control" min="0" />
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <label asp-for="EkzamenUkrMovaDyktant" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.EkzamenUkrMovaDyktant
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="EkzamenUkrMovaPerekaz" class="control-label">Проведення екзаменів - переказ</label>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label asp-for="EkzamenUkrMovaPerekazNGrup" class="col-sm-4">Груп:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="EkzamenUkrMovaPerekazNGrup" class="form-control" min="0" />
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <label asp-for="EkzamenUkrMovaPerekazNRobit" class="col-sm-4">Робіт:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="EkzamenUkrMovaPerekazNRobit" class="form-control" min="0" />
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <label asp-for="EkzamenUkrMovaPerekaz" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.EkzamenUkrMovaPerekaz
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="EkzamenUkrMovaTvir" class="control-label">Проведення екзаменів - Твір</label>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label asp-for="EkzamenUkrMovaTvirNGrup" class="col-sm-4">Груп:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="EkzamenUkrMovaTvirNGrup" class="form-control" min="0" />
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <label asp-for="EkzamenUkrMovaTvirNRobit" class="col-sm-4">Робіт:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="EkzamenUkrMovaTvirNRobit" class="form-control" min="0" />
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <label asp-for="EkzamenUkrMovaTvir" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.EkzamenUkrMovaTvir
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="EkzamenInshiPred" class="control-label">Проведення екзаменів - письмові з інших предметів</label>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label asp-for="EkzamenInshiPredNGrup" class="col-sm-4">Груп:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="EkzamenInshiPredNGrup" class="form-control" min="0" />
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <label asp-for="EkzamenInshiPredNRobit" class="col-sm-4">Робіт:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="EkzamenInshiPredNRobit" class="form-control" min="0" />
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <label asp-for="EkzamenInshiPred" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.EkzamenInshiPred
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="EkzamenTest" class="control-label">Проведення екзаменів - тестові з інших предметів</label>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="EkzamenTestNGrup" class="col-sm-4">Груп:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="EkzamenTestNGrup" class="form-control" min="0" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label asp-for="EkzamenTest" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.EkzamenTest
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="Seminar" data-toggle="tooltip" data-placement="top" title="" class="control-label">Проведення семінарських занять</label>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label asp-for="Seminar" class="col-sm-8">Годин:</label>
+                        <div class="col-sm-4">
+                            <input type="number" asp-for="Seminar" class="form-control" min="0" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="Individual" data-toggle="tooltip" data-placement="top" title="" class="control-label">Проведення індивідуальних занять</label>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label asp-for="Individual" class="col-sm-8">Годин:</label>
+                        <div class="col-sm-4">
+                            <input type="number" asp-for="Individual" class="form-control" min="0" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="KonsultEkzamVstup" class="control-label">Проведення екзаменаційних консультацій - до вступного екзамену</label>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="KonsultEkzamVstupNGrup" class="col-sm-4">Груп:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="KonsultEkzamVstupNGrup" class="form-control" min="0" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label asp-for="KonsultEkzamVstup" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.KonsultEkzamVstup
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="PerevirkaKontr" class="control-label">Перевірка контрольних</label>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="PerevirkaKontrN" class="col-sm-4">Робіт:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="PerevirkaKontrN" class="form-control" min="0" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label asp-for="PerevirkaKontr" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.PerevirkaKontr
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="PerevirkaRefer" class="control-label">Приймання рефератів, тестових завдань, аналітичних оглядів, перекладів</label>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="PerevirkaReferN" class="col-sm-4">Робіт:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="PerevirkaReferN" class="form-control" min="0" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label asp-for="PerevirkaRefer" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.PerevirkaRefer
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="PerevirkaGraf" class="control-label">Приймання розрахункових, графічних  та розрахунково-графічних робіт</label>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="PerevirkaGrafN" class="col-sm-4">Робіт:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="PerevirkaGrafN" class="form-control" min="0" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label asp-for="PerevirkaGraf" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.PerevirkaGraf
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="PerevirkaKursRobZagOsv" class="control-label">Приймання курсових робіт із загально-освітніх навчальних дисциплін</label>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="PerevirkaKursRobZagOsvNRobit" class="col-sm-4">Робіт:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="PerevirkaKursRobZagOsvNRobit" class="form-control" min="0" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label asp-for="PerevirkaKursRobZagOsv" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.PerevirkaKursRobZagOsv
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="PerevirkaKursRobFah" class="control-label">Приймання курсових робіт із фахових навчальних дисциплін</label>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="PerevirkaKursRobFahNRobit" class="col-sm-4">Робіт:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="PerevirkaKursRobFahNRobit" class="form-control" min="0" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label asp-for="PerevirkaKursRobFah" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.PerevirkaKursRobFah
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="PerevirkaKursProjZagIng" class="control-label">Приймання курсових проектів із загально-інженерних навчальних дисциплін</label>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="PerevirkaKursProjZagIngNRobit" class="col-sm-4">Робіт:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="PerevirkaKursProjZagIngNRobit" class="form-control" min="0" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label asp-for="PerevirkaKursProjZagIng" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.PerevirkaKursProjZagIng
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="PerevirkaKursProjFah" class="control-label">Приймання курсових проектів із фахових навчальним дисциплін</label>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="PerevirkaKursProjFahNrobit" class="col-sm-4">Робіт:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="PerevirkaKursProjFahNrobit" class="form-control" min="0" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label asp-for="PerevirkaKursProjFah" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.PerevirkaKursProjFah
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="SemestEkzUsn" class="control-label">Проведення семестрових екзаменів – в усній формі</label>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="SemestEkzUsnNGrup" class="col-sm-4">Груп:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="SemestEkzUsnNGrup" class="form-control" min="0" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label asp-for="SemestEkzUsn" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.SemestEkzUsn
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="SemestEkzUsn" class="control-label">Проведення семестрових екзаменів – в усній формі</label>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="SemestEkzUsnNGrup" class="col-sm-4">Груп:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="SemestEkzUsnNGrup" class="form-control" min="0" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label asp-for="SemestEkzUsn" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.SemestEkzUsn
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="SemestEkzPism" class="control-label">Проведення семестрових екзаменів – у письмовій формі</label>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label asp-for="SemestEkzPismNGrup" class="col-sm-4">Груп:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="SemestEkzPismNGrup" class="form-control" min="0" />
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <label asp-for="SemestEkzPismNRobit" class="col-sm-4">Робіт:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="SemestEkzPismNRobit" class="form-control" min="0" />
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <label asp-for="SemestEkzPism" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.SemestEkzPism
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="RecenzReferat" class="control-label">Рецензування рефератів під час вступу до аспірантури та складання кандидатських екзаменів</label>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="RecenzReferatNRobit" class="col-sm-4">Рефератів:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="RecenzReferatNRobit" class="form-control" min="0" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label asp-for="RecenzReferat" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.RecenzReferat
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="EkzamenAspirant" class="control-label">Проведення вступних екзаменів до аспірантури та кандидатських екзаменів </label>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="EkzamenAspirantNStud" class="col-sm-4">Студентів:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="EkzamenAspirantNStud" class="form-control" min="0" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label asp-for="EkzamenAspirant" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.EkzamenAspirant
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="KonsultDokrtor" class="control-label">Наукове консультування докторантів (до 3 років)</label>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="KonsultDokrtorN" class="col-sm-4">Докторантів:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="KonsultDokrtorN" class="form-control" min="0" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label asp-for="KonsultDokrtor" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.KonsultDokrtor
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <div class="row">
+                    <label asp-for="TematDisc" class="control-label col-sm-6">Керівництво стажуванням викладачів:</label>
+                    <div class="col-sm-6">
+                        <input type="number" asp-for="TematDisc" class="form-control" min="0" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <div class="row">
+                    <label asp-for="TematDisc" data-toggle="tooltip" data-placement="top" title="Проведення тематичних дискусій, науково-практичних конференцій слухачів вищих навчальних
+                       закладів післядипломної освіти та структурних підрозділів післядипломної освіти вищих навчальни
+                       х закладів" class="control-label col-sm-6">Проведення тематичних дискусій:</label>
+                    <div class="col-sm-6">
+                        <input type="number" asp-for="TematDisc" class="form-control" min="0" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="KerivnukStajSluhach" data-toggle="tooltip" data-placement="top" title="Керівництво стажуванням слухачів вищих навчальних закладів післядипломної освіти та структурних підрозділів післядипломної освіти вищих навчальних закладів на підприємствах, в установах та організаціях" class="control-label">Керівництво стажуванням слухачів </label>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="KerivnukStajSluhach" class="col-sm-4">Годин:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="KerivnukStajSluhach" class="form-control" min="0" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label asp-for="KerivnukStajSluhach" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.KerivnukStajSluhach
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="KerivnukSluhach" class="control-label">Керівництво, рецензування та проведення захисту випускних робіт слухачів </label>
+                <div class="row">
+
+                    <label asp-for="KerivnukSluhachNKeriv" class="col-sm-9">Керівник:</label>
+                    <div class="col-sm-3">
+                        <input type="number" asp-for="KerivnukSluhachNKeriv" class="form-control" min="0" />
+                    </div>
+
+                    <label asp-for="KerivnukSluhachNChlen" class="col-sm-9">Член комісії:</label>
+                    <div class="col-sm-3">
+                        <input type="number" asp-for="KerivnukSluhachNChlen" class="form-control" min="0" />
+                    </div>
+
+                    <label asp-for="KerivnukSluhachNKonsult" class="col-sm-9">Консультант:</label>
+                    <div class="col-sm-3">
+                        <input type="number" asp-for="KerivnukSluhachNKonsult" class="form-control" min="0" />
+                    </div>
+
+                    <label asp-for="KerivnukSluhach" class="col-sm-9 control-label">Годин:</label>
+                    <div class="col-sm-3">
+                        @Model.KerivnukSluhach
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="content-box">
+                <label asp-for="EkzamenSluhach" data-toggle="tooltip" data-placement="top" title="Проведення випускних екзаменів слухачів вищих навчальних закладів післядипломної освіти та структурних підрозділів післядипломної освіти вищих навчальних закладів" class="control-label">Проведення випускних екзаменів слухачів </label>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label asp-for="EkzamenSluhachNChlen" class="col-sm-4">Слухачів:</label>
+                        <div class="col-sm-8">
+                            <input type="number" asp-for="EkzamenSluhachNChlen" class="form-control" min="0" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label asp-for="EkzamenSluhach" class="col-sm-4 control-label">Годин:</label>
+                        <div class="col-sm-8">
+                            @Model.EkzamenSluhach
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Оновити" class="btn btn-default" />
+            </div>
+        </div>
+    </form>
+</div>
+
